@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block page_content %}
+<div>
+    <form class="posts-form" action="{% url 'edit_post' post.pk %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        {{ form.errors }}
+        <button>Edit Post</button>
+    </form>
+</div>
+{% endblock %}

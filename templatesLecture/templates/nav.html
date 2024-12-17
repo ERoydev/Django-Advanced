@@ -1,0 +1,22 @@
+<div>
+    <ul class="nav">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'show_posts' %}">All Posts</a></li>
+        <li><a href="{% url 'add_post' %}">Add Posts</a></li>
+        
+        {% if not user.is_authenticated %}
+            <li><a href="{% url 'register' %}">Register</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+        {% else %}   
+            <li><a onclick="event.preventDefault(); document.getElementById('logout-form').submit()" href="#">Logout</a></li>
+        {% endif %}
+    
+        <li>
+            <p>User: {{ request.user }}</p>
+        </li>
+    </ul>
+
+   <form id="logout-form" action="{% url 'logout' %}" method="POST" style="display: none;">
+        {% csrf_token %}
+    </form>
+</div>

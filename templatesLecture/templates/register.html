@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block page_content %}
+<div>
+    <form action="{% url 'register' %}" method="POST" class="form auth">
+        {% csrf_token %}
+        <div class="form-field">
+            {{ form.username.label_tag }}
+            {{ form.username }}
+        </div >
+
+        <div class="form-field">
+            {{ form.email.label_tag }}
+            {{ form.email }}
+        </div>
+
+        <div class="form-field">
+            {{ form.password1.label_tag }}
+            {{ form.password1 }}  <!-- This is the password field -->
+        </div>
+
+        <div class="form-field">
+            {{ form.password2.label_tag }}
+            {{ form.password2 }}  <!-- This is the password confirmation field -->
+        </div>
+        
+        <div>
+            {{ form.errors }}
+        </div>
+
+        <button>Register</button>
+    </form>
+</div>
+{% endblock %}

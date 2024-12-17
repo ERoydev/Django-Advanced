@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block page_content %}
+
+<div>
+    <h1 style="display: flex; justify-content: center; margin-bottom: 1em;">
+        Are you sure you want to approve this post?
+    </h1>
+    <form class="posts-form" action="{% url 'approve_post' post.pk %}" method="POST">
+        {% csrf_token %}
+        <button type="submit">Confirm</button>
+    </form>
+</div>
+{% endblock %}

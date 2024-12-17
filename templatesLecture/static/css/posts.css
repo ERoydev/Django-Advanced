@@ -1,0 +1,106 @@
+.post-container {
+    display: flex;
+}
+
+.post-item {
+    margin: 1em;
+    padding: 2em;
+    background-color: #dfdfdf;
+    border-radius: 15px;
+}
+
+.post-item:hover {
+    cursor: pointer;
+    background-color: #b5b5b5;
+}
+
+.post-item p {
+    font-size: 18px;
+}
+
+.post-item p:nth-of-type(2) {
+    padding: 1em 0;
+}
+.post-title {
+    font-size: 34px;
+    font-weight: bolder;
+}
+
+.post-content {
+    font-size: 26px;
+}
+
+.post-author, .post-language {
+    font-size: 19px;
+}
+
+.post-item .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.posts-form {
+    width: 900px;
+    margin: 0 auto;
+    background-color: #5a92d8;
+    border-radius: 25px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.posts-form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+}
+
+.posts-form button {
+    padding: 0.5em 1em;
+    color: white;
+    background-color: #333;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+}
+
+.posts-form button:hover {
+    background-color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.posts-form input, .posts-form textarea, .posts-form select{
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+
+}
+
+.btn {
+    padding: 0.5em 1em;
+    color: white;
+    background-color: #333;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.post-status {
+    display: flex;
+    color: cadetblue;
+}

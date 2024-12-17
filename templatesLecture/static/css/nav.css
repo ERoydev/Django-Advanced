@@ -1,0 +1,22 @@
+.nav {
+    display: flex;
+    list-style: none;
+    padding: 1em;
+    margin-bottom: 5em;
+    justify-content: center;
+    gap: 2em;
+    background-color: #d8d8d8;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.nav a {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color: #369;
+}
+
+.nav a:hover, nav a:focus {
+    color: #113643;
+}

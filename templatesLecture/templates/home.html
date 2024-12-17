@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block page_content %}
+<div>
+    <h1 style="text-align: center">Hello, user!</h1>
+    <p style="text-align: center; color: #333; font-size: 19px;">Here are the list of last 3 posts!</p>
+    <h2>Static Time: {{static_time|time:"s"}}</h2>
+    <h2>Dynamic Time: {{ dynamic_time|time:"s" }}</h2>
+{#    {% for post in all_posts %}#}
+{#        <div class="post-item">#}
+{#            <p ><span class="post-title">{{ post.title }}</span></p>#}
+{#            <p ><span class="post-content">{{ post.content }}</span></p>#}
+{#            <div class="row">#}
+{#                <p>Author: <span class="post-author">{{ post.author }}</span></p>#}
+{#                <p>Language: <span class="post-language">{{ post.languages }}</span></p>#}
+{##}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#    {% endfor %}#}
+</div>
+{% endblock %}
