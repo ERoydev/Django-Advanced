@@ -67,6 +67,17 @@ class DashboardView(ListView, FormView):
     context_object_name = 'posts'
     model = Post
     paginate_by = 2
+    extra_context = {
+        'static_time': datetime.now()
+    }
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context['dynamic_time'] = datetime.now(),
+
+        return context
+
 
     def get_queryset(self): # I take the query from the form
         queryset = self.model.objects.all()

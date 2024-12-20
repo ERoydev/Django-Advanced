@@ -1,0 +1,15 @@
+@import "posts.css";
+@import "comments.css";
+@import 'nav.css';
+@import 'forms.css';
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    width: 1400px;
+    margin: 0 auto;
+}

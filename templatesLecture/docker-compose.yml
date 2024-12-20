@@ -1,0 +1,11 @@
+services:
+  nginx:
+    image: nginx
+    ports:
+      # Kogato se hitne port 81 tova otgovarq na port 80 v docker
+      # kogato se udari port 81 v browser tova go preprashta na port 80 v docker
+      # Pogledni v nginx.conf ima `listen 80` koeto pravi cqlata logica
+      - "81:80"
+    volumes:
+      - './nginx/nginx.conf:/etc/nginx/nginx.conf'
+      - './static_files:/usr/share/nginx/html/static_files' # setuped my static files

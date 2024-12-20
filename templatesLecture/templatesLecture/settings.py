@@ -27,7 +27,10 @@ SECRET_KEY = 'django-insecure-r*d!=6v&0o0b)-py6)(ozbs+-2n&f9r05#n&5f0=afx)b)-%ay
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'myforum.bg', # for my local DNS i have configured in C:\Windows\System32\drivers\etc\hosts
+    'localhost',
+]
 
 
 # Application definition
@@ -129,11 +132,30 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+# FOR DOCKER PURPOSES
+# URL for accessing static files
+STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    BASE_DIR / 'static',
-)
+# Directory where static files are collected (for production use)
+STATIC_ROOT = BASE_DIR / 'static_files'
+# python manage.py collectstatic
+
+# LECTURE DEPLOYMENT AT 1:19:55 time
+
+# Additional directories to look for static files during development
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+    #'/app/assets/',  # Example additional directory for static files
+    # Do not include STATIC_ROOT here!
+]
+
+# FOR LOCAL DEVELOPMENT
+
+# STATIC_URL = '/static/'
+#
+# STATICFILES_DIRS = (
+#     BASE_DIR / 'static',
+# )
 
 # Celery settings
 CELERY_BROKER_URL = 'redis://localhost:6379/0'  # Redis broker URL

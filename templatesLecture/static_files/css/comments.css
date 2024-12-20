@@ -1,0 +1,26 @@
+.comment-item {
+    display: flex;
+    gap: 1em;
+    padding: 2em;
+    background-color: #dddddd;
+    border-radius: 15px;
+    margin-bottom: 1em;
+}
+
+.comment-item h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.comment-item p {
+    color: #333;
+}
+
+.profile-icon {
+    background-color: #c5c5c5;
+    padding: 0.8em;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
