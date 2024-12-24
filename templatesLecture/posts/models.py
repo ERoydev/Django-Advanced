@@ -44,6 +44,7 @@ class Post(models.Model):
         permissions = [
             ('can_approve_posts', 'Can approve posts'),
         ]
+        ordering = ['-created_at']
 
     def __str__(self):
         return self.title

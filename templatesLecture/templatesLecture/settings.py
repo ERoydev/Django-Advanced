@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-r*d!=6v&0o0b)-py6)(ozbs+-2n&f9r05#n&5f0=afx)b)-%ay
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'localhost:81']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'localhost:81', 'testserver']
 CSRF_TRUSTED_ORIGINS = ['http://localhost:81']
 
 # Application definition
@@ -62,7 +62,7 @@ ROOT_URLCONF = 'templatesLecture.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [ BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,9 +82,13 @@ WSGI_APPLICATION = 'templatesLecture.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "templatesLecture",
+        "USER": "postgres",
+        "PASSWORD": "test123",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
 
