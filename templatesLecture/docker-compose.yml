@@ -9,3 +9,7 @@ services:
     volumes:
       - './nginx/nginx.conf:/etc/nginx/nginx.conf'
       - './static_files:/usr/share/nginx/html/static_files' # setuped my static files
+        # Realno tezi neshta shte se tursqt v nginx configuraciqta
+    depends_on:
+      - django
+

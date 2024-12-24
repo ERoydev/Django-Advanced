@@ -27,11 +27,8 @@ SECRET_KEY = 'django-insecure-r*d!=6v&0o0b)-py6)(ozbs+-2n&f9r05#n&5f0=afx)b)-%ay
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'myforum.bg', # for my local DNS i have configured in C:\Windows\System32\drivers\etc\hosts
-    'localhost',
-]
-
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'localhost:81']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:81']
 
 # Application definition
 
