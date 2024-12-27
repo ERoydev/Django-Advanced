@@ -1,6 +1,6 @@
-from django.urls import reverse
-
 import tests.django_settings_initializer # This initializes my django_settings
+
+from django.urls import reverse
 
 from django.test import TestCase, RequestFactory
 from django.contrib.auth import get_user_model

@@ -54,12 +54,20 @@ class PostBaseForm(forms.ModelForm):
     error_messages = { # Pri model forma taka se slagat error
         'title': { # field
             'required': "This field is required", # Type of error
-            'max_length': "max_length should be 10"
+            'max_length': "max_length should be 100"
         }
     }
 
     def clean(self):
         cleaned_data = super().clean()
+
+        title = cleaned_data.get('title')
+        content = cleaned_data.get('content')
+
+        if title and content and title in content:
+            raise ValidationError("The post title cannot be included in post content!")
+
+        return cleaned_data
 
     def save(self, commit=True):
         post = super().save(commit=False)
