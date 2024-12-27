@@ -1,6 +1,3 @@
-
- 
- # Django-Advanced
 # Django-Advanced
 
 ---
